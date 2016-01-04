@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgDrawer"
+    tools:context="com.example.ziggy.materialapp.NavigationDrawerFragment">
+
+    <LinearLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+
+        <ImageView
+            android:id="@+id/navHeader"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:background="#2B0504" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/containerDrawerImage">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="2dp"
+    android:minHeight="72dp">
+
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:text="Futo Admission into Weekend Programmes for 2015/2016 Annouced"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/newsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newsTitle"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:text="Posted: 28-Dec-2015"
+        android:textSize="10dp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#e1e1e1"
+        android:layout_below="@+id/newsDate"/>
+
+</RelativeLayout>

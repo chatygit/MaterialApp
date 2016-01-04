@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#D51900</color>
+    <color name="primaryColorDark">#C90202</color>
+    <color name="bgDrawer">#fff</color>
+    <color name="accentColor">#EF5350</color>
+    <color name="mainText">#EF5350</color>
+    <color name="subText">#EF5350</color>
+
+
+    <color name="colorPrimary">#D51900</color>
+    <color name="colorPrimaryDark">#C90202</color>
+    <color name="colorPrimaryLight">#FFCDD2</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorHighlight">#FFFFFF</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDivider">#B6B6B6</color>
+
+</resources>
