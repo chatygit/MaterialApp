@@ -2,6 +2,7 @@ package com.example.ziggy.materialapp.fragments;
 
 
 import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +22,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.ziggy.materialapp.PastQuestionsActivity;
 import com.example.ziggy.materialapp.R;
 import com.example.ziggy.materialapp.SubActivity;
+import com.example.ziggy.materialapp.TakeExamActivity;
 import com.example.ziggy.materialapp.activities.News_Detail;
 import com.example.ziggy.materialapp.adapters.AdapterHome;
 import com.example.ziggy.materialapp.network.VolleySingleton;
@@ -60,6 +64,10 @@ public class FragmentHome extends Fragment implements AdapterHome.ClickListener{
     public static String selectedHeadline;
     public static String selectedDetail;
 
+    // Button Declarations
+    private Button takeExam;
+    private Button pastQuestions;
+    private Context context;
 
     /**
      * Use this factory method to create a new instance of
@@ -95,6 +103,8 @@ public class FragmentHome extends Fragment implements AdapterHome.ClickListener{
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+
+
         volleySingleton = VolleySingleton.getsInstance();
         requestQueue = volleySingleton.getRequestQueue();
         sendJsonRequest();
@@ -102,18 +112,18 @@ public class FragmentHome extends Fragment implements AdapterHome.ClickListener{
 
     }
 
+
     private ArrayList<News> parseJSONRequest(JSONArray response){
         ArrayList<News> listNews = new ArrayList<>();
 
         StringBuilder data = new StringBuilder();
-        if(response!=null || response.length()>0) {
+        if(response !=null && response.length()>0) {
 
 
             try {
-                JSONArray arrayNews = response;
                 for (int i = 0; i < 4; i++) {
                 //   for (int i = 0; i < arrayNews.length(); i++) {
-                    JSONObject currentNews = arrayNews.getJSONObject(i);
+                    JSONObject currentNews = response.getJSONObject(i);
                     int id = currentNews.getInt("id");
                     String headline = currentNews.getString("headline");
                     String detail = currentNews.getString("detail");
@@ -155,6 +165,27 @@ public class FragmentHome extends Fragment implements AdapterHome.ClickListener{
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_home,container,false);
+
+
+        // adding lister to button
+        takeExam = (Button) view.findViewById(R.id.take_exam);
+        pastQuestions = (Button) view.findViewById(R.id.past_questions);
+
+        pastQuestions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), PastQuestionsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        takeExam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), TakeExamActivity.class);
+                startActivity(intent);
+            }
+        });
         listNewsRyc = (RecyclerView) view.findViewById(R.id.listNews);
         listNewsRyc.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapterHome = new AdapterHome(getActivity());
