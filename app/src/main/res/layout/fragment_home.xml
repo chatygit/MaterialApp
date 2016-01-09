@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ziggy.materialapp.fragments.FragmentHome">
 
@@ -8,19 +9,19 @@
     <GridLayout
         android:id="@+id/ftext"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:columnCount="2"
         android:rowCount="1">
 
         <Button
             android:id="@+id/take_exam"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_width="120dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_column="0"
             android:layout_margin="10dp"
+            android:layout_row="0"
             android:background="#1976D2"
             android:padding="5dp"
             android:shadowColor="#000"
@@ -29,19 +30,19 @@
             android:shadowRadius="2"
             android:text="Take an Exam"
 
-            android:textSize="10dp"
             android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/past_questions"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_width="120dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_column="1"
             android:layout_margin="10dp"
+            android:layout_row="0"
             android:background="#FF9800"
             android:padding="5dp"
             android:shadowColor="#000"
@@ -49,10 +50,10 @@
             android:shadowDy="1"
             android:shadowRadius="2"
             android:text="Study Past Questions"
-            android:textSize="10dp"
             android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
 
     </GridLayout>
 
@@ -61,7 +62,6 @@
         android:id="@+id/listNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ftext"
-        />
+        android:layout_below="@+id/ftext" />
 
 </RelativeLayout>
