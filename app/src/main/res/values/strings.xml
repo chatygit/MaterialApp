@@ -12,6 +12,6 @@
         <item>Tab 3</item>
     </string-array>
     <string name="title_activity_news__detail">MySchool News</string>
-    <string name="title_activity_past_questions">PastQuestionsActivity</string>
-    <string name="title_activity_take_exam">TakeExamActivity</string>
+    <string name="title_activity_past_questions">Past Questions</string>
+    <string name="title_activity_take_exam">Take Exam</string>
 </resources>
