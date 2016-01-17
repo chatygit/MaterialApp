@@ -53,6 +53,9 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
 
+        DataBaseHelper helper = new DataBaseHelper(this);
+        helper.openDataBase();
+
 
         tabHost = (MaterialTabHost) findViewById(R.id.materialTabHost);
         viewPager = (ViewPager) findViewById(R.id.viewPager);

@@ -13,10 +13,12 @@
     tools:context="com.example.ziggy.materialapp.TakeExamActivity"
     tools:showIn="@layout/activity_take_exam">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Take AN Exam"/>
+        android:text="Take AN Exam"
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -40,5 +42,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/exam_next"
         android:text="Next"/>
+
 
 </LinearLayout>
